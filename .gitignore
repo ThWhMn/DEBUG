@@ -1,4 +1,5 @@
 /.vscode
+/.debug-master
 *.exe
 ftest*
 test*
