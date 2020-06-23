@@ -1,6 +1,7 @@
 /.vscode
 /jisuanke
 /daily_signin
+data*
 .clang*
 suc*
 *.exe
