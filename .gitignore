@@ -1,7 +1,8 @@
 /.vscode
-/anewfolder
-/anewfolderfromaliyun
 /jisuanke
+/daily_signin
+.clang*
+suc*
 *.exe
 ftest*
 test*
