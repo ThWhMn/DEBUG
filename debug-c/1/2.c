@@ -13,7 +13,6 @@ int main()
 
     scanf("%d%d", &p, &q);
     printf("%.4f", bisection(p, q, f));
-
     return 0;
 }
 
@@ -26,12 +25,10 @@ double bisection(int p, int q, double (*func)(int, int, double))
         mid = (a + b) / 2;
         if (fabs(f(p, q, mid)) < EPSILON) {
             return mid;
-        }
-        else if (f(p, q, a) * f(p, q, mid) < 0) {
+        } else if (f(p, q, a) * f(p, q, mid) < 0) {
             /* There are zero between a & mid */
             b = mid;
-        }
-        else {
+        } else {
             a = mid;
         }
     }

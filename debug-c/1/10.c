@@ -13,7 +13,6 @@ int main()
 
     scanf("%d%d", &p, &q);
     printf("%.4f\n", bisection(p, q, f));
-
     return 0;
 }
 

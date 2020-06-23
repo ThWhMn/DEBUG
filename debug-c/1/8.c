@@ -13,7 +13,6 @@ int main()
 
     scanf("%d%d", &p, &q);
     printf("%.4f\n", bisection(p, q, f));
-
     return 0;
 }
 
@@ -28,7 +27,6 @@ double bisection(int p, int q, double (*func)(int, int, double))
         fa = f(p, q, a);
         fb = f(p, q, b);
         x  = (a + b) / 2.0;
-
         fx = f(p, q, x);
         if ((fa > 0 && fx > 0) || (fa < 0 && fx < 0)) {
             /* fa & fx are on the same side of the x axis */
@@ -38,7 +36,6 @@ double bisection(int p, int q, double (*func)(int, int, double))
             b = x;
         }
     } while (fabs(fx) >= EPSILON);
-
     return x;
 }
 
