@@ -29,10 +29,9 @@ double bisection(int p, int q, double (*func)(int, int, double))
         x  = (a + b) / 2.0;
         fx = f(p, q, x);
         if ((fa > 0 && fx > 0) || (fa < 0 && fx < 0)) {
-            /* fa & fx are on the same side of the x axis */
+            // fa & fx are on the same side of the x axis
             a = x;
-        }
-        else {
+        } else {
             b = x;
         }
     } while (fabs(fx) >= EPSILON);

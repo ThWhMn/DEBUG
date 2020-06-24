@@ -26,7 +26,7 @@ double bisection(int p, int q, double (*func)(int, int, double))
         if (fabs(f(p, q, mid)) < EPSILON) {
             return mid;
         } else if (f(p, q, a) * f(p, q, mid) < 0) {
-            /* There are zero between a & mid */
+            // There are zero between a & mid
             b = mid;
         } else {
             a = mid;

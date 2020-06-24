@@ -33,7 +33,7 @@ int main()
             }
         }
     }
-    for (i = 0; i < m; i++) { /* Print result */ 
+    for (i = 0; i < m; i++) { /* Print result */
         for (j = 0; j < m; j++) {
             if (j != m - 1) {
                 printf("%d ", matrix_c[i][j]);

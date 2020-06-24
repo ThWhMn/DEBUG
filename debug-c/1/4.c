@@ -24,8 +24,8 @@ double bisection(int p, int q, double (*func)(int, int, double))
 
     if (fabs(f(p, q, mid)) < EPSILON) {
         return mid;
-    } else if ((f(p, q, a) > 0 && f(p, q, mid) < 0) || /* Decreasing f */
-               (f(p, q, a) < 0 && f(p, q, mid) > 0)) { /* Increasing f */
+    } else if ((f(p, q, a) > 0 && f(p, q, mid) < 0) ||
+               (f(p, q, a) < 0 && f(p, q, mid) > 0)) {
         /* There are zero between a & mid */
         while (fabs(f(p, q, mid)) >= EPSILON) {
             if ((f(p, q, a) > 0 && f(p, q, mid) < 0) ||
@@ -33,22 +33,20 @@ double bisection(int p, int q, double (*func)(int, int, double))
                 /* There are zero between a & mid */
                 b   = mid;
                 mid = (a + b) / 2;
-            } else if ((f(p, q, mid) > 0 &&
-                        f(p, q, b) < 0) || /* Decreasing f */
-                       (f(p, q, mid) < 0 &&
-                        f(p, q, b) > 0)) { /* Increasing f */
+            } else if ((f(p, q, mid) > 0 && f(p, q, b) < 0) ||
+                       (f(p, q, mid) < 0 && f(p, q, b) > 0)) {
                 /* There are zero between b & mid */
                 a   = mid;
                 mid = (a + b) / 2;
             }
         }
         return mid;
-    } else if ((f(p, q, mid) > 0 && f(p, q, b) < 0) || /* Decreasing f */
-               (f(p, q, mid) < 0 && f(p, q, b) > 0)) { /* Increasing f */
+    } else if ((f(p, q, mid) > 0 && f(p, q, b) < 0) ||
+               (f(p, q, mid) < 0 && f(p, q, b) > 0)) {
         /* There are zero between b & mid */
         while (fabs(f(p, q, mid)) >= EPSILON) {
-            if ((f(p, q, a) > 0 && f(p, q, mid) < 0) || /* Decreasing f */
-                (f(p, q, a) < 0 && f(p, q, mid) > 0)) { /* Increasing f */
+            if ((f(p, q, a) > 0 && f(p, q, mid) < 0) ||
+                (f(p, q, a) < 0 && f(p, q, mid) > 0)) {
                 /* There are zero between a & mid */
                 b   = mid;
                 mid = (a + b) / 2;

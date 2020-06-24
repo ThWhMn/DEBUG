@@ -6,8 +6,8 @@ int main()
     int matrix_b[10][10];
     int result[10][10];
     int i, j, k;
-    int m;
-    int n;
+    int m; /* number of rows */
+    int n; /* number of columns */
     int sum;
 
     scanf("%d %d", &m, &n);
