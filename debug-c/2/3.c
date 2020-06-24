@@ -6,7 +6,7 @@ int main() {
     int m;
     int n;
     scanf("%d%d",&m,&n);
-    int mat[m][m];
+    int mat[10][10];
     memset(mat,0,sizeof(mat));
     int i;
     int j;
@@ -22,7 +22,7 @@ int main() {
     {
         for(i=0;i<m;i++)
         {
-            scanf("%d",&matrix_a[j][i]);
+            scanf("%d",&matrix_b[j][i]);
         }
     }
    for(i=0;i<m;i++)
