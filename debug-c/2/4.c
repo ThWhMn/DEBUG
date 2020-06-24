@@ -21,10 +21,6 @@ int main()
         }
     }
     /*
-    Actually, I don't know why these thing are here
-    Maybe these are printf() debug method. Whatever
-    */
-    /*
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             printf("%d ", matrix_a[i][j]);

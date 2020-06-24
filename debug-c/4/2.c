@@ -1,31 +1,35 @@
 #include <stdio.h>
-void swap(int *a, int *b){
+
+// If a is greater than b, swap a & b
+void swap(int* a, int* b)
+{
     int temp;
     temp = *a;
-    *a = *b;
-    *b = temp;
+    *a   = *b;
+    *b   = temp;
     return;
 }
 
-int main() {
+int main()
+{
     int n = 10;
-    int numbers[n];
+    int numbers[10];
     int i;
-	int j;
-    // 读入给定的数字
-    for (i = 0; i < n; i++) {
+    int j;
+
+    for (i = 0; i < n; i++) { // read numbers
         scanf("%d", &numbers[i]);
     }
-	for (i = 0; i < n; i++) {
-        for (j = n - 1; j > i; j--){
-            if ( numbers[j - 1] < numbers[j]) {
-                swap(&numbers[j - 1], &numbers[j]);                
+    for (i = 0; i < n; i++) { // bubble sort
+        for (j = n - 1; j > i; j--) {
+            if (numbers[j - 1] < numbers[j]) {
+                swap(&numbers[j - 1], &numbers[j]);
             }
         }
     }
-	for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) { // print sorted numbers[]
         printf("%d", numbers[i]);
-        if (i != n) {
+        if (i != n - 1) {
             printf(" ");
         }
     }

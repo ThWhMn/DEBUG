@@ -27,11 +27,10 @@ double bisection(int p, int q, double (*func)(int, int, double))
             return mid;
         else {
             if (func(p, q, mid) * func(p, q, a) < 0) {
-                /* There are zero between a & mid */
+                // There are zero between a & mid
                 b   = mid;
                 mid = (a + b) / 2;
-            }
-            else {
+            } else {
                 a   = mid;
                 mid = (a + b) / 2;
             }

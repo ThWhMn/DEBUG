@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int n = 10;
     int m;
     int numbers[10];
@@ -9,28 +10,28 @@ int main() {
     int k;
     int j;
     int o;
+
     // 读入给定的数字
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
-    for (j = 0; j < n; j++) {
-        for(k = j; k < n - 1; k++){
-            if(numbers[k] < numbers[k+1]){
-                m = k + 1;
+    for (j = 0; j < n; j++) { // selection sort
+        m = j;
+        for (k = j; k < n; k++) {
+            if (numbers[m] < numbers[k]) {
+                m = k;
             }
-           
         }
-        o = numbers[j];
+        o          = numbers[j];
         numbers[j] = numbers[m];
         numbers[m] = o;
     }
-    for (int q = 0; q < n; q++) {
+    for (int q = 0; q < n; q++) { // print sorted numbers[]
         if (q == 9) {
             printf("%d", numbers[q]);
         } else {
             printf("%d ", numbers[q]);
         }
     }
-
     return 0;
 }

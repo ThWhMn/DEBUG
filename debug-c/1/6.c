@@ -24,13 +24,12 @@ double bisection(int p, int q, double (*func)(int, int, double))
 
     while (fabs(f(p, q, mid)) >= EPSILON) {
         if (f(p, q, mid) * f(p, q, a) < 0) {
-            /* There are zero between a & mid */
+            // There are zero between a & mid
             b   = mid;
             mid = (a + b) / 2;
-        }
-        else {
+        } else {
             if (f(p, q, mid) * f(p, q, b) < 0) {
-                /* There are zero between b & mid */
+                // There are zero between b & mid
                 a   = mid;
                 mid = (a + b) / 2;
             }

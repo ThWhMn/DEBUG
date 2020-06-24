@@ -6,9 +6,9 @@ int main()
     int matrix_a[10][10];
     int matrix_b[10][10];
     int matrix_result[15][15];
-    int m;
+    int m; /* number of rows */
     int mIndex;
-    int n;
+    int n; /* number of columns */
     int nIndex;
 
     scanf("%d %d", &m, &n);
@@ -27,7 +27,7 @@ int main()
             matrix_result[mIndex][nIndex] = 0;
         }
     }
-    for (mIndex = 0; mIndex < m; mIndex++) {
+    for (mIndex = 0; mIndex < m; mIndex++) { /* Matrix multiplication */
         for (nIndex = 0; nIndex < m; nIndex++) {
             for (j = 0; j < n; j++) {
                 matrix_result[mIndex][nIndex] +=

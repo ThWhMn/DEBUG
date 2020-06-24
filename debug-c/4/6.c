@@ -1,35 +1,32 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int n = 10;
     int m;
     int numbers[10];
-    int i,j;
-    int tmpt;
+    int i, j;
+    int temp;
 
     // 读入给定的数字
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
-
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) { // bubble sort
         for (j = i; j < n; j++) {
-            if (numbers[i] < numbers[j]){
-                tmpt = numbers[i];
+            if (numbers[i] < numbers[j]) {
+                temp       = numbers[i];
                 numbers[i] = numbers[j];
-                numbers[j] =   tmpt;
+                numbers[j] = temp;
             }
         }
     }
-
     for (int m = 0; m < 10; m++) {
-        if (m != 9){
+        if (m != 9) {
             printf("%d ", numbers[m]);
-        }else{
+        } else {
             printf("%d", numbers[m]);
         }
-        
     }
-
     return 0;
 }
