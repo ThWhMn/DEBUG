@@ -7,13 +7,13 @@ int main() {
     int i;
     int max;
     int inter;
-    // ¶ÁÈë¸ø¶¨µÄÊı×Ö
+    // è¯»å…¥ç»™å®šçš„æ•°å­—
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
     for(i = 0; i <= 9; i++){
-        for(m = i; m <= 9; m++){
-            max = m;
+        max=i;
+        for(m = i; m < 9; m++){
             if(numbers[max] < numbers[m+1]){
                 max = m + 1;
             }
@@ -29,6 +29,5 @@ int main() {
             printf(" ");
         }
     }
-
     return 0;
 }

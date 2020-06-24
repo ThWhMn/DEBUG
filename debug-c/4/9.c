@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-void swap(int a, int b) {
+void swap(int *a, int *b) {
     int c;
-    if(a <= b){
-        c = a;
-        a = b;
-        b = c;
+    if(*a <= *b){
+        c = *a;
+        *a = *b;
+        *b = c;
     }
 }
 
@@ -15,13 +15,13 @@ int main() {
     int numbers[10];
     int i;
     
-    // ¶ÁÈë¸ø¶¨µÄÊý×Ö
+    // è¯»å…¥ç»™å®šçš„æ•°å­—
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
     for (i = 0; i < n; i++) {
         for(int j = 0; j < n - 1; j++) {
-            swap(numbers[j], numbers[j + 1]);
+            swap(&numbers[j], &numbers[j + 1]);
         }
     }
     for (int i = 0; i < n; i++) {
@@ -29,7 +29,5 @@ int main() {
         if(i != n - 1) printf(" ");
     }
     
-
-
     return 0;
 }
