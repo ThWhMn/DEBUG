@@ -6,25 +6,25 @@ int main(){
 	int matrix_c[10][10];
 	int m;
 	int n;
-	int i, j, k; //主循环参数
-	for (i = 0; i <= 10; i++){//乘积矩阵初始化
+	int i, j, k;   //declaration
+	for (i = 0; i <= 10; i++){
 		for (k = 0; k <= 10; k++){
 			matrix_c[i][k] = 0;
 		}
 	}
-	scanf("%d %d", &m, &n);//m、n输入
-	for (i = 0; i < m; i++){//矩阵输入
+	scanf("%d %d", &m, &n);  //input m,c
+	for (i = 0; i < m; i++){  //input
 		for (k = 0; k < n; k++){
 			scanf("%d", &matrix_a[i][k]);
 		}
 	}
 
-	for (k = 0; k < n; k++){
+	for (k = 0; k < n; k++){  //input
 		for (i = 0; i < m; i++){
 			scanf("%d", &matrix_b[k][i]);
 		}
 	}
-	for (i = 0; i < m; i++){//乘法
+	for (i = 0; i < m; i++){  //process
 		for (j = 0; j < m; j++){
 			for (k = 0; k < n; k++){
 				matrix_c[i][j] += (matrix_a[i][k] * matrix_b[k][j]);
