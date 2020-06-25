@@ -7,24 +7,22 @@ int main() {
     int i;
     int max;
     int inter;
-    // 读入给定的数字
     for (i = 0; i < n; i++) {
-        scanf("%d", &numbers[i]);
+        scanf("%d", &numbers[i]);//input
     }
     for(i = 0; i <= 9; i++){
         max=i;
         for(m = i; m < 9; m++){
-            if(numbers[max] < numbers[m+1]){
+            if(numbers[max] < numbers[m+1]){ //look for the max number
                 max = m + 1;
             }
         }
-        inter = numbers[i];
+        inter = numbers[i];  //swap
         numbers[i] = numbers[max];
         numbers[max] = inter;
     }
-    
     for(i = 0; i <= 9; i++){
-        printf("%d", numbers[i]);
+        printf("%d", numbers[i]);//output
         if(i != 9){
             printf(" ");
         }

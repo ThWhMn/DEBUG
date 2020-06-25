@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void swap(int *a, int *b) {
+void swap(int *a, int *b) {//swap two numbers
     int c;
     if(*a <= *b){
         c = *a;
@@ -14,9 +14,7 @@ int main() {
     int m;
     int numbers[10];
     int i;
-    
-    // 读入给定的数字
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {// input
         scanf("%d", &numbers[i]);
     }
     for (i = 0; i < n; i++) {
@@ -25,7 +23,7 @@ int main() {
         }
     }
     for (int i = 0; i < n; i++) {
-        printf("%d", numbers[i]);
+        printf("%d", numbers[i]);//output
         if(i != n - 1) printf(" ");
     }
     
