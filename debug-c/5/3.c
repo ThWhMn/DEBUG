@@ -9,7 +9,7 @@ void swap(char *a,char *b)
 }
 int main() 
 {
-	int i;//intermediate variable
+    int i;//intermediate variable
     int j;
     int k;
     int l;
