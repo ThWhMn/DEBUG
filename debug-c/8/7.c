@@ -3,8 +3,8 @@
 int main() {
     int n;
     int i, j;
-    scanf("%d", &n);
-    char names[n][101];
+    scanf("%d\n", &n);
+    char names[100][101];
     char temp[101];
     
         for (i = 0; i < n; i++) {
