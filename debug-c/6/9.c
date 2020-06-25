@@ -7,18 +7,14 @@ int main(int argc, char *argv[]) {
 	int chmod_r = 0;
 	int chmod_w = 0;
 	int chmod_x = 0;
-	
-	
 	char temp[3];
 	char permission[10][3];
-	
-	//输入
+	//input
 	while (scanf("%s", temp) != EOF) {
 			strcpy(permission[i], temp);
 			i++;
 		}
-	
-	//第一行统计
+	//initial
 	for (i = 0; i < 3; i++) {
 		if (permission[0][i] == 'r') {
 				chmod_r++;
@@ -30,8 +26,7 @@ int main(int argc, char *argv[]) {
 				chmod_x++;
 			}
 		}
-	
-	//权限修改
+	//correct
 	for (i = 1; i < 10; i++) {
 		if (permission[i][0] == '+') {
 			if (permission[i][1] == 'r') {
@@ -57,7 +52,6 @@ int main(int argc, char *argv[]) {
 		}
 		
 	}
-	
 		if (chmod_r > 0) {
 			chmod += 100;
 		}
@@ -67,14 +61,23 @@ int main(int argc, char *argv[]) {
 		if (chmod_x > 0) {
 			chmod += 1;
 		}
-		  
+		//output
 		if (chmod == 111) {
 			printf("7");
 		} else if (chmod == 110) {
 			printf("6");
 		} else if (chmod == 101) {
-					printf("5");
-				}
-
+			printf("5");
+		} else if (chmod == 100) {
+			printf("4");
+		} else if (chmod == 011) {
+			printf("3");
+		} else if (chmod == 010) {
+			printf("2");
+		} else if (chmod == 001) {
+			printf("1");
+		} else if (chmod == 000) {
+			printf("0");
+		}
 	return 0;
 }
