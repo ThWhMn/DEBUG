@@ -1,33 +1,31 @@
 #include <stdio.h>
 #include <string.h>
-int main() {
-    int n;
-    scanf("%d\n", &n);
-    int i,j,k;
-    char a[100][100]={'0'};
-    char temp[100] = {'0'};
 
-    for(i = 0; i < n; i++){
-        for(j = 0; j < 100; j++){
-            if(scanf("%c",&a[i][j]) == EOF){
+int main()
+{
+    int  i, j, k, n;
+    char a[100][100] = {'0'};
+    char temp[100]   = {'0'};
+
+    scanf("%d\n", &n);        // input
+    for (i = 0; i < n; i++) { // read a[][]
+        for (j = 0; j < 100; j++) {
+            if (scanf("%c", &a[i][j]) == EOF) {
                 break;
             }
-            if(a[i][j] == '\n' ){
+            if (a[i][j] == '\n') {
                 break;
             }
         }
     }
-    
-    for(i = 0,k = 0; i < n - 1; i++){
-        if (strlen(a[k]) > strlen(a[i+1])){
-            strcpy(temp, a[k]);
-        }
-        else{
-            k = i+1;
-            strcpy(temp, a[k]);
+
+    strcpy(temp, a[0]);
+    for (i = 1; i < n; i++) { // find the longest
+        if (strlen(a[i]) > strlen(temp)) {
+            strcpy(temp, a[i]);
         }
     }
-    printf("%s",temp);
 
+    printf("%s", temp);
     return 0;
 }
