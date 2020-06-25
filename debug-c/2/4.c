@@ -20,26 +20,6 @@ int main()
             scanf("%d", &matrix_b[i][j]);
         }
     }
-    /*
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            printf("%d ", matrix_a[i][j]);
-        }
-        printf("\n");
-    }
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            printf("%d ", matrix_b[i][j]);
-        }
-        printf("\n");
-    }
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < m; j++) {
-            printf("%d ", m3[i][j]);
-        }
-        printf("\n");
-    }
-    */
     /* Put the result of matrix multiplication into m3 */
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < m; j++) {
