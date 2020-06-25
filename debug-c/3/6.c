@@ -3,8 +3,8 @@
 int main()
 {
     int matrix[100][100];
-    int m; // Number of rows
-    int n; // Number of columns
+    int m;         // Number of rows
+    int n;         // Number of columns
     int start = 0; // The start of outermost matrix
     int column, row;
     int flag = 1; // Used to judge whether printed the end
