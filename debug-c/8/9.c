@@ -4,7 +4,7 @@ int main() {
     int n;
     int i, j;
     scanf("%d\n", &n);
-    char string[n][101];
+    char string[100][101];
     for (i = 0; i < n; i++){
         for (j = 0; j < 100; j++){
             scanf("%c", &string[i][j]);

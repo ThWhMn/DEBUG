@@ -26,16 +26,18 @@ int main()
                 printf("NO");
             }
         }
-    } else if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) {
-        if (d >= 1 && d <= 31)
+    } else if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12){
+        if (d >= 1 && d <= 31) {
             printf("YES");
-        else
+        } else {
             printf("NO");
+        }
     } else if (m == 4 || m == 6 || m == 9 || m == 11) {
-        if (d >= 1 && d <= 30)
+        if (d >= 1 && d <= 30) {
             printf("YES");
-        else
+        } else {
             printf("NO");
+        }
     } else {
         printf("NO");
     }
