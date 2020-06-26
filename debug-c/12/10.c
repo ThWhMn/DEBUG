@@ -1,9 +1,14 @@
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
+
 #define PI 3.14159
-int main() {
-double radius;
+
+int main()
+{
+    double radius;
+
     scanf("%lf", &radius);
-    printf("%.3f/n%.3f", 2*PI*radius, PI*pow(radius,2));
+    printf("%.3lf\n%.3lf", 2 * PI * radius, PI * pow(radius, 2));
+
     return 0;
 }
