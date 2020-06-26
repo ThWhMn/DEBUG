@@ -1,19 +1,19 @@
 #include <stdio.h>
-    long long int fun(int n)
-    {if(n==2)
-     return 1;
-    if(n==3)
-     return 1;
-    else
-     return fun(n-2)+fun(n-3);
+
+long long int fun(int n)//calculate
+{
+    if(n == 0 || n == 1) {
+        return 0;
+    } else if(n == 2 || n == 3) {
+        return 1;
+    } else {
+        return fun(n-2)+fun(n-3);
     }
-int main() {
-long long int n;
-    //int sum = 0;
-    
-    while(scanf("%d",&n)!=EOF){
-        
-    printf("%lld\n",fun(n));
-    }
+}
+int main() 
+{
+    int n;
+    scanf("%d", &n); //input
+    printf("%d", fun(n));  //output
     return 0;
 }
