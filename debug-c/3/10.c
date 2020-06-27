@@ -14,7 +14,7 @@ int main()
     num = m * n;
     for (int i = 0; i < m; i++) { // Read matrix
         for (int j = 0; j < n; j++) {
-            scanf("%d ", &matrix[i][j]);
+            scanf("%d", &matrix[i][j]);
         }
     }
     while (k < m && l < n) {
