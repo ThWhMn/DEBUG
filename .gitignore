@@ -1,6 +1,7 @@
 /.vscode
 /jisuanke
 /daily_signin
+/graph_project
 data*
 .clang*
 suc*
