@@ -21,7 +21,7 @@ int main()
     for (j = 0; j < 10; j++) {
         for (k = 0; k < 9 - j; k++) {
             if (strcmp(name[k], name[k + 1]) >= 0) {
-                for (l = 0; l < 20; l++) {//swap one by one
+                for (l = 0; l < 21; l++) {//swap one by one
                     swap(&name[k][l], &name[k + 1][l]);
                 }
             }
@@ -29,9 +29,9 @@ int main()
     }
     int m;
     for (m = 0; m < 10; m++) {//output
-        printf("%s ", name[m]);
+        printf("%s", name[m]);
         if (m != 9) {
-            printf(" \n");
+            printf("\n");
         }
     }
     return 0;
