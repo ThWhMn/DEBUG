@@ -28,7 +28,11 @@ int main()
 
     for (int i = 0; i < 10; i++) //循环输出排序以后的结果
     {
-        printf("%d ", a[i]);
+        if(i < 9) {
+            printf("%d ", a[i]);
+        } else {
+            printf("%d",a[i]);
+        }
     }
     return 0;
 }
