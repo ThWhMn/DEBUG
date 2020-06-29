@@ -10,7 +10,9 @@ int main()
 
     for (i = 0; i < 10; i++) { // read names[][]
         scanf("%s", name);
-        strcpy(names[i], name);
+        for (j = 0; j < strlen(name) + 1; j++) {
+            names[i][j] = name[j];
+        }
     }
 
     for (i = 0; i < 10; i++) { // bubble sort
