@@ -37,7 +37,9 @@ int main()
                 printf(" ");
             }
         }
-        printf("\n");
+        if (i != m - 1) {
+            printf("\n");
+        }
     }
     return 0;
 }

@@ -30,8 +30,7 @@ int main()
     for (mIndex = 0; mIndex < m; mIndex++) { /* Matrix multiplication */
         for (nIndex = 0; nIndex < m; nIndex++) {
             for (j = 0; j < n; j++) {
-                matrix_result[mIndex][nIndex] +=
-                    matrix_a[mIndex][j] * matrix_b[j][nIndex];
+                matrix_result[mIndex][nIndex] += matrix_a[mIndex][j] * matrix_b[j][nIndex];
             }
         }
     }
@@ -40,7 +39,7 @@ int main()
             printf("%d", matrix_result[mIndex][nIndex]);
             if (nIndex == m - 1 && mIndex != m - 1) {
                 printf("\n");
-            } else if (mIndex != m) {
+            } else if (nIndex != m - 1 && mIndex != m) {
                 printf(" ");
             }
         }

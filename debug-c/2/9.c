@@ -38,9 +38,10 @@ int main(){
 				printf(" ");
 			} if (i == m - 1){
 				continue;
-			} if (k == m - 1)
-			{
-				printf("\n");
+			} if (k == m - 1) {
+				if(i != m - 1) {
+                    printf("\n");
+                }
 			}
 		}
 	}
