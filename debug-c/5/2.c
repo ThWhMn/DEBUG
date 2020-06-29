@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void swap(char* a, char* b)
+void swap(char *a, char *b)
 {
     char temp;
     temp = *a;
@@ -24,7 +24,7 @@ int main()
     for (j = 0; j < 10; j++) { // bubble sort
         for (k = 0; k < 9 - j; k++) {
             if (strcmp(name[k], name[k + 1]) >= 0) {
-                for (l = 0; l < 20; l++) {
+                for (l = 0; l < 21; l++) {
                     swap(&name[k][l], &name[k + 1][l]);
                 }
             }
@@ -32,7 +32,10 @@ int main()
     }
 
     for (m = 0; m < 10; m++) { // print sorted name[]
-        printf("%s\n", name[m]);
+        printf("%s", name[m]);
+        if (m != 9) {
+            printf("\n");
+        }
     }
 
     return 0;
