@@ -32,7 +32,10 @@ int main()
     for (i = 0; i < m; i++) {//output
         for (j = 0; j < m; j++) {
             if (j == m - 1) {
-                printf("%d\n", mat[i][j]);
+                printf("%d", mat[i][j]);
+                if(i != m - 1) {
+                    printf("\n");
+                }
             } else {
                 printf("%d ", mat[i][j]);
             }

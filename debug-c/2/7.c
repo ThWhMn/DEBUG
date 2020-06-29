@@ -30,7 +30,9 @@ int main(void) {
         for (int j = 0; j < m; j++) {
             j != m - 1? printf("%d ", mtxC[i][j]):printf("%d", mtxC[i][j]);
         }
-        printf("\n");
+        if(i != m - 1) {
+            printf("\n");
+        }
     }
     return 0;
 }

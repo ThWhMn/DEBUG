@@ -26,8 +26,11 @@ int main() {
                 temp += matrix_a[i][k] * matrix_b[k][j];
             }
             matrixResult[i][j] = temp;
-            if(j==m-1) {
-                printf("%d\n", matrixResult[i][j]);
+            if(j == m - 1) {
+                printf("%d", matrixResult[i][j]);
+                if(i != m - 1) {
+                    printf("\n");
+                }
             } else {
                 printf("%d ", matrixResult[i][j]);
             }
