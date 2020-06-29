@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 typedef struct node {
-    int data;
+    int          data;
     struct node *next;
 } Node;
 
 Node *circle_create(int n);
-void count_off(Node *head, int n, int k, int m);
+void  count_off(Node *head, int n, int k, int m);
 
-int main() 
+int main()
 {
     int n, k, m;
     scanf("%d%d%d", &n, &k, &m);
@@ -18,48 +18,49 @@ int main()
     return 0;
 }
 
-Node *circle_create(int n) {
+Node *circle_create(int n)
+{
     Node *temp, *new_node, *head;
-    int i;
-    temp = (Node *) malloc(sizeof(Node));//create first Node and add data
-    head = temp;
+    int   i;
+    temp       = (Node *)malloc(sizeof(Node)); // create first Node and add data
+    head       = temp;
     head->data = 1;
-    for(i = 2; i <= n; i++) {
-        new_node = (Node *) malloc(sizeof(Node));//create 2~n Node and add data
+    for (i = 2; i <= n; i++) {
+        new_node       = (Node *)malloc(sizeof(Node)); // create 2~n Node and add data
         new_node->data = i;
-        temp->next = new_node;
-        temp = new_node;
+        temp->next     = new_node;
+        temp           = new_node;
     }
     temp->next = head;
     return head;
 }
 
-void count_off(Node *head, int n, int k, int m) {
-Node *temp = head;
+void count_off(Node *head, int n, int k, int m)
+{
+    Node *temp = head;
     if (k == 1) {
         for (int i = 1; i < n; i++) {
             temp = temp->next;
         }
     } else {
         for (int i = 1; i < k - 1; i++) {
-        		temp = temp->next;
-    		}
+            temp = temp->next;
+        }
     }
-    int num = 0;
+    int num   = 0;
     int count = 0;
     while (count < n) {
         num++;
         if (num == m) {
             count++;
-            if(count == n) {
-            	printf("%d", temp->next->data);
+            if (count == n) {
+                printf("%d", temp->next->data);
             } else {
-                printf("%d ", temp->next->data); 
+                printf("%d ", temp->next->data);
             }
             temp->next = temp->next->next;
-            num = 0;
+            num        = 0;
         } else {
-            
             temp = temp->next;
         }
     }
