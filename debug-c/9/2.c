@@ -3,7 +3,7 @@
 int main()
 {
     int N;        //总台阶数
-    int step[50]; // step[N]N级台阶的方法数
+    int step[51]; // step[N]N级台阶的方法数
     int i;
 
     step[1] = 0; // initialize step[]
