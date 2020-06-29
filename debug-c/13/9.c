@@ -59,7 +59,7 @@ void count_off(Node *head, int n, int k, int m) {
             pre->next = pre->next->next;
             temp = pre;
             i = 0;
-            if(times != 1) {
+            if(times != 1 && times != n + 1) {
                 printf(" ");
             }
         }
