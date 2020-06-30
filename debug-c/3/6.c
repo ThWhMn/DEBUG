@@ -42,8 +42,7 @@ int main()
                 } else
                     printf("%d ", matrix[start][j]);
             }
-            for (int i = start + 1; i < row && flag;
-                 i++) { // print from Top to Bottom
+            for (int i = start + 1; i < row && flag; i++) { // print from Top to Bottom
                 if (i + 1 == row && column - 1 == start) {
                     printf("%d", matrix[i][column - 1]);
                     flag = 0;
@@ -51,8 +50,7 @@ int main()
                 } else
                     printf("%d ", matrix[i][column - 1]);
             }
-            for (int j = column - 2; j >= start && flag;
-                 j--) { // print from R to L
+            for (int j = column - 2; j >= start && flag; j--) { // print from R to L
                 if (row - 2 == start && j == start) {
                     printf("%d", matrix[row - 1][j]);
                     flag = 0;

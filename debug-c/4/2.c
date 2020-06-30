@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // If a is greater than b, swap a & b
-void swap(int* a, int* b)
+void swap(int *a, int *b)
 {
     int temp;
     temp = *a;
