@@ -7,8 +7,8 @@ int main()
     scanf("%d\n", &n);
     size_t max = 0;
     size_t current;
-    char maxName[200];
-    char name[200];
+    char   maxName[200];
+    char   name[200];
     for (int i = 0; i < n; i++) {
         gets(name);
         current = strlen(name);
@@ -17,6 +17,6 @@ int main()
             strcpy(maxName, name);
         }
     }
-    printf("%s",maxName);
+    printf("%s", maxName);
     return 0;
 }

@@ -3,12 +3,12 @@
 
 int main()
 {
-    int arr[32] = {0};
+    int  arr[32] = {0};
     char input[500];
-    int bits[32];
+    int  bits[32];
     char result[32];
-    int i = 1, j = 0;
-    while (scanf("%c", &input[i - 1]) != EOF) {//input
+    int  i = 1, j = 0;
+    while (scanf("%c", &input[i - 1]) != EOF) { // input
         if (input[i - 1] == '\n') {
             break;
         }
@@ -20,7 +20,7 @@ int main()
     }
     for (j = 0; j <= 31; j++) {
         result[j] = (char)((bits[j] % 85) + 34);
-        printf("%c", result[j]);//output
+        printf("%c", result[j]); // output
     }
     return 0;
 }

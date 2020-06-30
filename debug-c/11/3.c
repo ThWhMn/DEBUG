@@ -6,25 +6,25 @@ int main()
     int arr[32];
     memset(arr, 0, sizeof(arr));
     char n;
-    int i = 1;
-    while (scanf("%c", &n) != EOF) {//input
-        if (n == '\n') {//end input
+    int  i = 1;
+    while (scanf("%c", &n) != EOF) { // input
+        if (n == '\n') {             // end input
             break;
         }
-        int c = (int)n;
+        int c       = (int)n;
         arr[i % 32] = arr[i % 32] + c;
         i++;
     }
     int bits[32];
     int j;
     for (j = 0; j < 32; j++) {
-        int d = arr[31 - j] ^ arr[j] << 1;
+        int d   = arr[31 - j] ^ arr[j] << 1;
         bits[j] = d;
     }
     for (j = 0; j < 32; j++) {
-        int d = bits[j] % 85 + 34;
+        int  d = bits[j] % 85 + 34;
         char t = (char)d;
-        printf("%c", t);//output
+        printf("%c", t); // output
     }
     return 0;
 }
