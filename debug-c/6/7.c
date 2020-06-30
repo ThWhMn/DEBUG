@@ -34,34 +34,37 @@ int main()
         if (temp == '+') {
             scanf("%c", &temp);
             add(temp);
-            scanf("%c", &temp);
-        } else {
+            continue;
+        } 
+        if (temp == '-') {
             scanf("%c", &temp);
             delete1(temp);
-            scanf("%c", &temp);
         }
     }
     // output
     printf("%d", rwx);
     return 0;
 }
-void add(char input)
+
+void add(char input) 
 {
-    if (input == 'r') {
-        rwx ^= (1 << 2);
+    if (input == 'r' ) {
+        rwx |= 4;
     } else if (input == 'w') {
-        rwx ^= (1 << 1);
+        rwx |= 2;
     } else if (input == 'x') {
-        rwx ^= (1 << 0);
+        rwx |= 1;
     }
 }
-void delete1(char input)
+
+void delete1(char input) 
 {
-    if (input == 'r') {
-        rwx ^= (1 << 2);
+    if (input == 'r' ) {
+        rwx &= ~4;
     } else if (input == 'w') {
-        rwx ^= (1 << 1);
+        rwx &= ~2;
     } else if (input == 'x') {
-        rwx ^= (1 << 0);
+        rwx &= ~1;
     }
 }
+
