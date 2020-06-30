@@ -4,7 +4,7 @@
 int main()
 {
     int matrix[100][100];
-    int m,n;
+    int m, n;
     int i, j, x;
 
     scanf("%d %d", &m, &n);

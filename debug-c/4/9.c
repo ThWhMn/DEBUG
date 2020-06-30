@@ -1,31 +1,34 @@
 #include <stdio.h>
 
-void swap(int *a, int *b) {//swap two numbers
+void swap(int *a, int *b)
+{ // swap two numbers
     int c;
-    if(*a <= *b){
-        c = *a;
+    if (*a <= *b) {
+        c  = *a;
         *a = *b;
         *b = c;
     }
 }
 
-int main() {
+int main()
+{
     int n = 10;
     int m;
     int numbers[10];
     int i;
-    for (i = 0; i < n; i++) {// input
+    for (i = 0; i < n; i++) { // input
         scanf("%d", &numbers[i]);
     }
     for (i = 0; i < n; i++) {
-        for(int j = 0; j < n - 1; j++) {
+        for (int j = 0; j < n - 1; j++) {
             swap(&numbers[j], &numbers[j + 1]);
         }
     }
     for (int i = 0; i < n; i++) {
-        printf("%d", numbers[i]);//output
-        if(i != n - 1) printf(" ");
+        printf("%d", numbers[i]); // output
+        if (i != n - 1)
+            printf(" ");
     }
-    
+
     return 0;
 }

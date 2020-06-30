@@ -1,7 +1,10 @@
 #include <stdio.h>
+
 void add(char);
 void delete1(char);
+
 int rwx = 0;
+
 int main()
 {
     // initiation
@@ -15,8 +18,7 @@ int main()
         if (temp == 'x') {
             rwx ^= (1 << 0);
         }
-    }
-    else if (temp == 'r') {
+    } else if (temp == 'r') {
         rwx ^= (1 << 2);
         scanf("%c", &temp);
         if (temp == 'w') {
@@ -28,8 +30,7 @@ int main()
         }
     }
     // modification
-    while (scanf("%c", &temp) != EOF)
-    {
+    while (scanf("%c", &temp) != EOF) {
         if (temp == '+') {
             scanf("%c", &temp);
             add(temp);

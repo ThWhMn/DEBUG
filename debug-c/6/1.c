@@ -4,7 +4,7 @@
 int main()
 {
     char string[4];
-    scanf("%s", string);//output
+    scanf("%s", string); // output
     int current = 0;
     for (int i = 0; i < 3; i++) { // first time
         if (string[i] == 'r') {
@@ -16,8 +16,8 @@ int main()
         }
     }
     char reqrmt[3];
-    int req = 0;
-    while (scanf("%s", reqrmt) != EOF)//correct
+    int  req = 0;
+    while (scanf("%s", reqrmt) != EOF) // correct
     {
         if (reqrmt[1] == 'r') {
             req = 2 * 2;
@@ -32,6 +32,6 @@ int main()
             current -= req;
         }
     }
-    printf("%d\n", current);//output
+    printf("%d\n", current); // output
     return 0;
 }

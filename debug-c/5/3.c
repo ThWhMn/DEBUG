@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
 void swap(char *a, char *b)
 {
     char temp;
@@ -7,6 +8,7 @@ void swap(char *a, char *b)
     *a   = *b;
     *b   = temp;
 }
+
 int main()
 {
     int  i; // intermediate variable

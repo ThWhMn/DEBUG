@@ -33,8 +33,7 @@ int main()
     }
     i = 0; // i is the number of printed elements
     while (i != k) {
-        for (j = n - n0; j < n0 - 1 || n0 == 2;
-             j++) { // print from left to right
+        for (j = n - n0; j < n0 - 1 || n0 == 2; j++) { // print from left to right
             printf("%d", matrix[m - m0][j]);
             i++;
             if (i == k)
@@ -68,9 +67,9 @@ int main()
         }
         n0--; // unprinted columns minus one
         m0--; // unprinted rows minus one
-        if (m0 == n0 && i == k-1) {
+        if (m0 == n0 && i == k - 1) {
             // while the matrix is square and there is only one unprinted
-            printf("%d", matrix[j+1][n - n0]);
+            printf("%d", matrix[j + 1][n - n0]);
             i++;
         }
     }
