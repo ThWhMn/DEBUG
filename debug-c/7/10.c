@@ -33,10 +33,10 @@ int main()
     } else if ((a % 400 == 0) && b == 2 && (c < 1 || c > 29)) {
         // February in leap year
         printf("NO");
-    } else if ((a % 100 != 0 || a % 4 == 0) && b == 2 && (c < 1 || c > 29)) {
+    } else if ((a % 100 != 0 && a % 4 == 0) && b == 2 && (c < 1 || c > 29)) {
         // February in leap year
         printf("NO");
-    } else if ((b == 2 && (c < 1 || c > 28))) {
+    } else if (!(a % 100 != 0 && a % 4 == 0) && !(a % 400 == 0) && b == 2 && (c < 1 || c > 28)) {
         // February in Non-leap year
         printf("NO");
     } else {

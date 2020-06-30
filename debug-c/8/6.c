@@ -8,15 +8,13 @@ int main()
     char names[101][101], temp[101];
     int  max, number;
 
-    scanf("%d", &n);                           // input
-    while (scanf("%c", &names[i][j]) != EOF) { // read names[][]
-        for (i = 0; i < n; i++) {
-            for (j = 0; j < 101; j++) {
-                scanf("%c", &names[i][j]);
-                if (names[i][j] == '\n') {
-                    names[i][j] = '\0';
-                    break;
-                }
+    scanf("%d\n", &n); // input
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < 101; j++) {
+            scanf("%c", &names[i][j]);
+            if (names[i][j] == '\n') {
+                names[i][j] = '\0';
+                break;
             }
         }
     }
