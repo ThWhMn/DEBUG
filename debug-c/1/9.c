@@ -17,18 +17,18 @@ double bisection(int p, int q, double (*func)(int, int, double))
 {
     double a = -20;
     double b = 20;
-    double c;
-    c = (a + b) / 2;
-    while (fabs(f(p, q, c)) >= EPSILON) {  /*which can make
+    // double c;
+    // c = (a + b) / 2;
+    while (fabs(f(p, q, (a + b) / 2)) >= EPSILON) {  /*which can make
                                               (a+b)/2 approach answer*/
-        if (f(p, q, a) * f(p, q, c) > 0) { /*0 between b and (a+b)/2*/
-            a = c;
+        if (f(p, q, a) * f(p, q, (a + b) / 2) > 0) { /*0 between b and (a+b)/2*/
+            a = (a + b) / 2;
         } else { /*0 between a and (a+b)/2*/
-            b = c;
+            b = (a + b) / 2;
         }
-        c = (a + b) / 2.0;
+        // c = (a + b) / 2.0;
     }
-    return c;
+    return (a + b) / 2;
 }
 
 double f(int p, int q, double x)
