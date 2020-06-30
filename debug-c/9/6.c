@@ -3,7 +3,7 @@
 int main()
 {
     int N, i;
-    int part[50];
+    int part[51];
     part[2] = 1;
     part[3] = 1;
     part[4] = 1;

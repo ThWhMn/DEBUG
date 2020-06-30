@@ -4,7 +4,7 @@ int main()
 {
     int n, i;
     int sum = 0;
-    int arr[50];
+    int arr[51];
 
     scanf("%d", &n);
     arr[1] = 0; // initialize arr[]

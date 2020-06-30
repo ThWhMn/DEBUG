@@ -9,17 +9,11 @@ int main()
     char str[501], rstr[501];
 
     i = 1;
-    while (scanf("%c", &str[i]) != EOF) {
-        if (str[i] == '\n') {
-            str[i] = '\0';
-            break;
-        }
-        i++;
-    }
+    scanf("%s", str);
 
     k = strlen(str);
     for (i = 1; i <= k; i++) {
-        arr[i % 32] += str[i];
+        arr[i % 32] += str[i - 1];
     }
 
     for (j = 0; j < 32; j++) {
