@@ -1,10 +1,11 @@
 #include <stdio.h>
+
 int main()
 {
     int a;
     int i;
     int j;
-    scanf("%d", &a);//input
+    scanf("%d", &a); // input
     if (a == 2) {
         printf("2");
     } else {
@@ -14,7 +15,7 @@ int main()
                 if (j % i == 0) {
                     break;
                 } else if (i == j - 1) {
-                    printf("%d\n", j);//output
+                    printf("%d\n", j); // output
                 }
             }
         }
